@@ -9,6 +9,7 @@
     state: poweredon
     guest_id: "{{ vcenter_guest_id }}"
     esxi_hostname: "{{ esxi_hostname }}"
+    datacenter: "{{ datacenter }}"
     cdrom:
       type: iso
       iso_path: "{{ cdrom_iso_path }}"

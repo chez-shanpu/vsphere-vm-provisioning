@@ -6,6 +6,7 @@ vcenter_folder: "/DC1/vm/"
 vcenter_vm_name: "sample-vm"
 vcenter_guest_id: "ubuntu64Guest" # refer https://code.vmware.com/apis/358/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html
 esxi_hostname: "sample" # This is hostname of particular ESXi server on which user wants VM to be deployed
+datacenter: "sample_datacenter"
 cdrom_iso_path: "[datastore1] path/to/file.iso"
 cdrom_controller_type: sata
 cdrom_controller_number: 0
