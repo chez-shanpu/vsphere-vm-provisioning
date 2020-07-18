@@ -1,0 +1,23 @@
+# ansible_python_interpreter: /usr/bin/python3
+vcenter_hostname: "sample.com"
+vcenter_username: "shanpu"
+vcenter_password: "***"
+vcenter_folder: "/DC1/vm/"
+vcenter_vm_name: "sample-vm"
+vcenter_guest_id: "ubuntu64Guest" # refer https://code.vmware.com/apis/358/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html
+esxi_hostname: "sample" # This is hostname of particular ESXi server on which user wants VM to be deployed
+cdrom_iso_path: "[datastore1] path/to/file.iso"
+cdrom_controller_type: sata
+cdrom_controller_number: 0
+cdrom_unit_number: 0
+disk_size_gb: 32
+disk_type: thin
+disk_datastore: "sample"
+hardware_memory_mb: 4096
+hardware_num_cpus: 2
+hardware_scsi: lsilogic
+networks_name: "sample_network"
+# networks_mac: aa:bb:dd:aa:00:14
+networks_ip: 127.0.0.1
+networks_netmask: 255.255.255.0
+networks_device_type: vmxnet3
