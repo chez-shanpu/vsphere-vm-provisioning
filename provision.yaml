@@ -1,37 +1,6 @@
-- name: Create a virtual machine on given ESXi hostname
-  vmware_guest:
-    hostname: "{{ vcenter_hostname }}"
-    username: "{{ vcenter_username }}"
-    password: "{{ vcenter_password }}"
-    validate_certs: no
-    folder: "{{ vcenter_folder }}"
-    name: "{{ vcenter_vm_name }}"
-    state: poweredon
-    guest_id: "{{ vcenter_guest_id }}"
-    esxi_hostname: "{{ esxi_hostname }}"
-    datacenter: "{{ datacenter }}"
-    cdrom:
-      type: iso
-      iso_path: "{{ cdrom_iso_path }}"
-      controller_type: "{{ cdrom_controller_type }}"
-      controller_number: "{{ cdrom_controller_number }}"
-      unit_number: "{{ cdrom_unit_number }}"
-    disk:
-    - size_gb: "{{ disk_size_gb }}"
-      type: "{{ disk_type }}"
-      datastore: "{{ disk_datastore }}"
-    hardware:
-      memory_mb: "{{ hardware_memory_mb }}"
-      num_cpus: "{{ hardware_num_cpus }}"
-      scsi: "{{ hardware_scsi }}"
-    networks:
-    - name: "{{ networks_name }}"
-      # mac: "{{ networks_mac }}"
-      ip: "{{ networks_ip }}"
-      netmask: "{{ networks_netmask }}"
-      device_type: "{{ networks_device_type }}"
-    # wait_for_ip_address: yes
-  register: result
-
-- name: DEBUG print result
-  debug: var=result
+---
+- hosts: localhost
+  connection: local
+  roles:
+    - name: common
+      tags: common
