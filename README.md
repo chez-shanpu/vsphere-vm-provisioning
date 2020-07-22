@@ -5,11 +5,9 @@
 
 ## Usage
 ```bash
-# copy vars file
-$ cp vars.sample.yaml vars.yaml
-# edit vars.yaml
-$ vi vars.yaml
+# edit variable file
+$ vi roles/common/vars/main.yaml
 
 # exec
-$ ansible-playbook main.yaml 
+$ ansible-playbook provision.yaml 
 ```
