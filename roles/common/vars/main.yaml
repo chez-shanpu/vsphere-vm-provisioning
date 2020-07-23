@@ -1,11 +1,12 @@
 # ansible_python_interpreter: /usr/bin/python3
+hostname: "sample.com"
+username: "shanpu"
+password: "***"
+folder: "/DC1/vm/"
+
 instances:
   test1:
     vcenter:
-      hostname: "sample.com"
-      username: "shanpu"
-      password: "***"
-      folder: "/DC1/vm/"
       vm_name: "sample-vm"
       guest_id: "ubuntu64Guest" # refer https://code.vmware.com/apis/358/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html
     esxi:
@@ -32,10 +33,6 @@ instances:
       device_type: vmxnet3
   test2:
     vcenter:
-      hostname: "sample.com"
-      username: "shanpu"
-      password: "***"
-      folder: "/DC1/vm/"
       vm_name: "sample-vm"
       guest_id: "ubuntu64Guest" # refer https://code.vmware.com/apis/358/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html
     esxi:

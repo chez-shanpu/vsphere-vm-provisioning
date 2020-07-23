@@ -1,10 +1,10 @@
 - name: Create a virtual machine on given ESXi hostname
   vmware_guest:
-    hostname: "{{ item.value.vcenter.hostname }}"
-    username: "{{ item.value.vcenter.username }}"
-    password: "{{ item.value.vcenter.password }}"
+    hostname: "{{ hostname }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
     validate_certs: no
-    folder: "{{ item.value.vcenter.folder }}"
+    folder: "{{ folder }}"
     name: "{{ item.value.vcenter.vm_name }}"
     state: poweredon
     guest_id: "{{ item.value.vcenter.guest_id }}"
