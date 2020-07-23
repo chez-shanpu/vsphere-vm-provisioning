@@ -1,24 +1,62 @@
 # ansible_python_interpreter: /usr/bin/python3
-vcenter_hostname: "sample.com"
-vcenter_username: "shanpu"
-vcenter_password: "***"
-vcenter_folder: "/DC1/vm/"
-vcenter_vm_name: "sample-vm"
-vcenter_guest_id: "ubuntu64Guest" # refer https://code.vmware.com/apis/358/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html
-esxi_hostname: "sample" # This is hostname of particular ESXi server on which user wants VM to be deployed
-datacenter: "sample_datacenter"
-cdrom_iso_path: "[datastore1] path/to/file.iso"
-cdrom_controller_type: sata
-cdrom_controller_number: 0
-cdrom_unit_number: 0
-disk_size_gb: 32
-disk_type: thin
-disk_datastore: "sample"
-hardware_memory_mb: 4096
-hardware_num_cpus: 2
-hardware_scsi: lsilogic
-networks_name: "sample_network"
-# networks_mac: aa:bb:dd:aa:00:14
-networks_ip: 127.0.0.1
-networks_netmask: 255.255.255.0
-networks_device_type: vmxnet3
+instances:
+  test1:
+    vcenter:
+      hostname: "sample.com"
+      username: "shanpu"
+      password: "***"
+      folder: "/DC1/vm/"
+      vm_name: "sample-vm"
+      guest_id: "ubuntu64Guest" # refer https://code.vmware.com/apis/358/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html
+    esxi:
+      hostname: "sample" # This is hostname of particular ESXi server on which user wants VM to be deployed
+    datacenter: "sample_datacenter"
+    cdrom:
+      iso_path: "[datastore1] path/to/file.iso"
+      controller_type: sata
+      controller_number: 0
+      unit_number: 0
+    disk:
+      size_gb: 32
+      type: thin
+      datastore: "sample"
+    hardware:
+      memory_mb: 4096
+      num_cpus: 2
+      scsi: lsilogic
+    networks:
+      name: "sample_network"
+      # mac: aa:bb:dd:aa:00:14
+      ip: 127.0.0.1
+      netmask: 255.255.255.0
+      device_type: vmxnet3
+  test2:
+    vcenter:
+      hostname: "sample.com"
+      username: "shanpu"
+      password: "***"
+      folder: "/DC1/vm/"
+      vm_name: "sample-vm"
+      guest_id: "ubuntu64Guest" # refer https://code.vmware.com/apis/358/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html
+    esxi:
+      hostname: "sample" # This is hostname of particular ESXi server on which user wants VM to be deployed
+    datacenter: "sample_datacenter"
+    cdrom:
+      iso_path: "[datastore1] path/to/file.iso"
+      controller_type: sata
+      controller_number: 0
+      unit_number: 0
+    disk:
+      size_gb: 32
+      type: thin
+      datastore: "sample"
+    hardware:
+      memory_mb: 4096
+      num_cpus: 2
+      scsi: lsilogic
+    networks:
+      name: "sample_network"
+      # mac: aa:bb:dd:aa:00:14
+      ip: 127.0.0.1
+      netmask: 255.255.255.0
+      device_type: vmxnet3
