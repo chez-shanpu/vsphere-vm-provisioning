@@ -27,9 +27,6 @@ instances:
       scsi: lsilogic
     networks:
       name: "sample_network"
-      # mac: aa:bb:dd:aa:00:14
-      ip: 127.0.0.1
-      netmask: 255.255.255.0
       device_type: vmxnet3
   test2:
     vcenter:
@@ -53,7 +50,4 @@ instances:
       scsi: lsilogic
     networks:
       name: "sample_network"
-      # mac: aa:bb:dd:aa:00:14
-      ip: 127.0.0.1
-      netmask: 255.255.255.0
       device_type: vmxnet3
