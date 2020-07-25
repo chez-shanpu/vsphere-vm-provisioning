@@ -27,8 +27,8 @@
     networks:
       - name: "{{ item.value.networks.name }}"
         # mac: "{{ item.value.networks.mac }}"
-        ip: "{{ item.value.networks.ip }}"
-        netmask: "{{ item.value.networks.netmask }}"
+        # ip: "{{ item.value.networks.ip }}"
+        # netmask: "{{ item.value.networks.netmask }}"
         device_type: "{{ item.value.networks.device_type }}"
     # wait_for_ip_address: yes
   register: result
