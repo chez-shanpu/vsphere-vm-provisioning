@@ -32,7 +32,7 @@
         device_type: "{{ item.value.networks.device_type }}"
     # wait_for_ip_address: yes
   register: result
-  loop: "{{ lookup('dict', instances) }}"
+  loop: "{{ q('dict', instances) }}"
 
 - name: DEBUG print result
   debug: var=result
